@@ -10,8 +10,8 @@
 class Solution {
 public:
     int guessNumber(int n) {
-        long low=1,high=n;
-        long mid=(low+high)/2;
+        long long low=1,high=n;
+        long long mid=(low+high)/2;
 
         while(low<=high)
         {
