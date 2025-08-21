@@ -6,7 +6,7 @@ public:
     int firstBadVersion(int n) {
         int ans=-1;
         long low=1,high=n;
-        long long mid;
+        long mid;
 
         while(low<=high)
         {
