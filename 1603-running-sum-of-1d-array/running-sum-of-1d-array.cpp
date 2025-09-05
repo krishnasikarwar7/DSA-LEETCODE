@@ -5,11 +5,7 @@ public:
         int sum=0;
         for(int i=0;i<nums.size();i++)
         {
-            sum=0;
-            for(int j=0;j<=i;j++)
-            {
-                sum+=nums[j];
-            }
+            sum+=nums[i];
             ans.push_back(sum);
         }
 
