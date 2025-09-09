@@ -4,9 +4,14 @@ public:
         vector<int> ans;
         double answer=0;
         int x=0;
-        ans.insert(ans.end(), nums1.begin(), nums1.end());
-        ans.insert(ans.end(), nums2.begin(), nums2.end());
-
+        for(int i=0;i<nums1.size();i++)
+        {
+            ans.push_back(nums1[i]);
+        }
+        for(int i=0;i<nums2.size();i++)
+        {
+            ans.push_back(nums2[i]);
+        }
         sort(ans.begin(),ans.end());
         x=ans.size();
         if(x%2!=0)
