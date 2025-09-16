@@ -5,14 +5,13 @@ public:
         long long sum=0;
         int c=0;
 
-        for(int cost:costs)
+        for(int i=0;i<costs.size();i++)
         {
-            if(sum+cost>coins)
+            sum+=costs[i];
+            if(sum<=coins)
             {
-                break;
+                c++;
             }
-            sum+=cost;
-            c++;
         }
 
         return c;
