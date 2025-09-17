@@ -12,7 +12,17 @@ public:
         {
             ans.push_back(nums2[i]);
         }
-        sort(ans.begin(),ans.end());
+
+        for(int i=0;i<ans.size()-1;i++)
+        {
+            for(int j=0;j<ans.size()-i-1;j++)
+            {
+                if(ans[j]>ans[j+1])
+                {
+                    swap(ans[j],ans[j+1]);
+                }
+            }
+        }
         x=ans.size();
         if(x%2!=0)
         {
