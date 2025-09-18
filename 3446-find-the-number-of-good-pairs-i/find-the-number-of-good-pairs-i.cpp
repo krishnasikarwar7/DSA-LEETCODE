@@ -1,17 +1,20 @@
 class Solution {
 public:
     int numberOfPairs(vector<int>& nums1, vector<int>& nums2, int k) {
-        int n=nums1.size();
-        int m=nums2.size();
+        unordered_map<int,int> map;
         int c=0;
-
-        for(int i=0;i<n;i++)
+        for(int num:nums2)
         {
-            for(int j=0;j<m;j++)
+            map[num*k]++;
+        }
+
+        for(int num:nums1)
+        {
+            for(auto &p:map)
             {
-                if(nums1[i]%(nums2[j]*k)==0)
+                if(num % p.first==0)
                 {
-                    c++;
+                    c+=p.second;
                 }
             }
         }
