@@ -4,7 +4,7 @@ public:
         int rev=0,digit=0,orig;
         unordered_set<int> set(nums.begin(),nums.end());
         int n=nums.size();
-        for(int i=0;i<nums.size();i++)
+        for(int i=0;i<n;i++)
         {
             rev=0;
             orig=nums[i];
