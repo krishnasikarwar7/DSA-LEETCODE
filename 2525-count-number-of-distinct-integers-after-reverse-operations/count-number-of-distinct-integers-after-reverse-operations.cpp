@@ -3,11 +3,10 @@ public:
     int countDistinctIntegers(vector<int>& nums) {
         int rev=0,digit=0,orig;
         unordered_set<int> set(nums.begin(),nums.end());
-        int n=nums.size();
-        for(int i=0;i<n;i++)
+        for(int num:nums)
         {
             rev=0;
-            orig=nums[i];
+            orig=num;
             while(orig>0)
             {
                 digit=orig%10;
