@@ -9,19 +9,18 @@ public:
             if(!isalnum(s[st]))
             {
                 st++;
-                continue;
             }
-            if(!isalnum(s[e]))
+            else if(!isalnum(s[e]))
             {
                 e--;
-                continue;
             }
-            if(tolower(s[st])!=tolower(s[e]))
+            else
             {
-                return false;
+                if(tolower(s[st++])!=tolower(s[e--]))
+                {
+                    return false;
+                }
             }
-            st++;
-            e--;
             
         }
 
