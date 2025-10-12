@@ -1,29 +1,30 @@
 class Solution {
 public:
     vector<int> pivotArray(vector<int>& nums, int pivot) {
-        vector<int> prev,equal,after;
-        
+        vector<int> result;
+        int ec=0;
+
         for(int num:nums)
         {
             if(num<pivot)
             {
-                prev.push_back(num);
+                result.push_back(num);
             }
             if(num==pivot)
             {
-                equal.push_back(num);
-            }
-            if(num>pivot)
-            {
-                after.push_back(num);
+                ec++;
             }
         }
 
-        vector<int> result;
+        result.insert(result.end(),ec,pivot);
 
-        result.insert(result.end(),prev.begin(),prev.end());
-        result.insert(result.end(),equal.begin(),equal.end());
-        result.insert(result.end(),after.begin(),after.end());
+        for(int num:nums)
+        {
+            if(num>pivot)
+            {
+                result.push_back(num);
+            }
+        }
 
         return result;
     }
