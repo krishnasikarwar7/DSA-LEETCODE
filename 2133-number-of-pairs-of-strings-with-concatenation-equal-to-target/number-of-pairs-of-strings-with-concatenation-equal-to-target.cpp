@@ -1,21 +1,19 @@
 class Solution {
 public:
     int numOfPairs(vector<string>& nums, string target) {
-        int n=nums.size();
-        int c=0;
+        unordered_map<string, int> freq;
+        int c = 0;
 
-        for(int i=0;i<n;i++)
-        {
-            for(int j=i+1;j<n;j++)
-            {
-                if(nums[i]+nums[j]==target)
-                {
-                    c++;
-                }
-                if(nums[j]+nums[i]==target)
-                {
-                    c++;
-                }
+        for (auto &s : nums)
+            freq[s]++;
+
+        for (auto &s : nums) {
+            if (target.find(s) == 0) 
+            { 
+                string rest = target.substr(s.size());
+                c += freq[rest];
+                if (rest == s)
+                    c--;  
             }
         }
 
