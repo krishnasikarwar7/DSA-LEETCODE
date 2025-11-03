@@ -10,7 +10,7 @@ public:
         {
             if(val>0)
                 pos.push_back(val);
-            if(val<0)
+            else
                 neg.push_back(val);
         }
 
