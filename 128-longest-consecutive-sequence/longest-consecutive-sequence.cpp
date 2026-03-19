@@ -7,11 +7,10 @@ public:
         {
             if(s.find(num-1)==s.end())
             {
-                int curr=num;
                 int cnt=1;
-                while(s.find(curr+1)!=s.end())
+                while(s.find(num+1)!=s.end())
                 {
-                    curr++;
+                    num++;
                     cnt++;
                 }
                 l=max(l,cnt);
