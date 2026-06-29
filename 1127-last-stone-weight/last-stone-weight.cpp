@@ -12,10 +12,13 @@ public:
         {
             int x=pq.top(); pq.pop();
             int y=pq.top(); pq.pop();
-            int z=abs(x-y);
-            pq.push(z);
+            
+            if(x!=y)
+            {
+                pq.push(abs(x-y));
+            }
         }
 
-        return pq.top();
+        return pq.empty()?0:pq.top();
     }
 };
