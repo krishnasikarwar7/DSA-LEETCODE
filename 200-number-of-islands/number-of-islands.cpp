@@ -1,6 +1,6 @@
 class Solution {
 public:
-    void dfs(int r, int c, vector<vector<char>>& grid, vector<vector<char>>& vis)
+    void dfs(int r, int c, vector<vector<char>>& grid, vector<vector<int>>& vis)
     {
         vis[r][c]=1;
         int dr[]={-1,1,0,0};
@@ -19,7 +19,7 @@ public:
 
     int numIslands(vector<vector<char>>& grid) {
         int n=grid.size(),m=grid[0].size();
-        vector<vector<char>> vis(n,vector<char>(m,0));
+        vector<vector<int>> vis(n,vector<int>(m,0));
         int c=0;
         for(int i=0;i<n;i++)
         {
